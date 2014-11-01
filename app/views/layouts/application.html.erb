@@ -26,7 +26,7 @@
           <li class="active"><a href="/">Home</a></li>
           <li><a href="/static_pages/about">About</a></li>
           <% if user_signed_in? %>
-            <li<%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
           <% else %>
             <li><a href="/users/sign_in" accesskey="8" title="">Login</a></li>
           <% end %>
@@ -36,6 +36,16 @@
   </nav>
   <br>
   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <% if notice %>
+      <p class="notice"><%= notice.html_safe %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert"><%= alert.html_safe %></p>
+    <% end %>
     <%= yield %>
 
   <div class="container">

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'organizations/needs_form'
+
   devise_for :users
   root 'static_pages#index'
 
