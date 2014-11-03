@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :volunteers
+  devise_for :organizations
+  devise_for :models
   get 'organizations/needs_form'
 
   devise_for :users
